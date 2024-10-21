@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '@/components/navbar'
 const DefaultLayout: React.FC<{ children: React.ReactNode}> = ({children}) => {
   return (
-    <div className='flex flex-col w-full min-h-screen bg-pink-300'>
+    <div className='flex flex-col w-full min-h-screen'>
         <Navbar />
         <main>{children}</main>
         <footer className='flex justify-center items-center py-3'>

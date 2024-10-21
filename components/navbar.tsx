@@ -28,9 +28,9 @@ const Navbar = () => {
         {label: "Dasboard", href: "/"},
         {label: "Today's Demand", href: "/todays-demand"},
         {label: "Demand Uploader", href: "/dashboard"},
-        {label: "Demand vs Supply", href: "/dashboard"},
+        {label: "Demand vs Supply", href: "/demand-supply"},
         {label: "Admin", href: "/portfolio"},
-        {label: "Loss Config", href: "/portfolio"},
+        {label: "Loss Config", href: "/loss-config"},
         {label: "Contact Us", href: "/contact"},
     ]
   return (
