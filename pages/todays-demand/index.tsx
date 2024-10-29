@@ -19,6 +19,9 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 import { Tabs, Tab, Card, CardBody } from "@nextui-org/react";
+
+import SiteInfoTable from "@/components/siteinfo";
+import ReadingTable from "@/components/readingtable";
 const TodayDemandPage = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -72,9 +75,18 @@ const TodayDemandPage = () => {
     {profit: 56, loss:11},
     {profit: 78, loss:5},
   ]
+
+  // site info table paramtets
+  const energy: number = 56
+  const power: number = 78
+  const oil: number = 43
+  const wood: number = 14
+  const water: number = 96
   return (
     <DefaultLayout>
       <div className="w-full flex flex-col p-4 gap-8">
+        
+        {/* 1st div for modal and select */}
         <div className="flex gap-4 items-center bg-pink-200">
           <select className="bg-indigo-100 p-4 border rounded-md">
             {PlantList.map((item, idx) => (
@@ -154,6 +166,22 @@ const TodayDemandPage = () => {
             )}
           </ModalContent>
         </Modal>
+
+        {/* 2nd div for tabs and 2 table - redux part */}
+        <Tabs>
+          <Tab key='ReduxTable' title='ReduxTable'>
+            <SiteInfoTable 
+            energy = {energy}
+            power = {power}
+            oil = {oil}
+            wood = {wood}
+            water = {water}
+            />
+          </Tab>
+          <Tab key='ReadingTable' title='ReadingTable'>
+          <ReadingTable />
+          </Tab>
+        </Tabs>
       </div>
     </DefaultLayout>
   );

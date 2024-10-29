@@ -48,7 +48,7 @@ const LossConfigPage = () => {
   const tableHeader = ["Name", "UserName", "Phone Number", "Company", "Email", "Action"];
   const [tableData, setTableData] = useState<Table[]>([]);
 
-  //   const handleInputChange = (e: React.FocusEvent<HTMLTableCellElement>) => {
+//     const handleInputChange = (e: React.FocusEvent<HTMLTableCellElement>) => {
 //     const target = e.target as HTMLTableCellElement; // Type assertion
 //     dispatch(setUserTableName(target.innerText)); // Use innerText for contentEditable
 // };
